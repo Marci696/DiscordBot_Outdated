@@ -1,0 +1,18 @@
+{
+  "discord": {
+    "account": "",
+    "password": "",
+    "token": ""
+  },
+  "mysql":{
+    "host"     : "localhost",
+    "user"     : "",
+    "password" : "",
+    "database" : "discord_bot"
+  },
+  "trigger": "?",
+  "permissionRequired": "manageChannel",
+  "helpList": "/helplists/helplist_$(lang).txt",
+  "admin": ["160457629343285249"],
+  "malAcc": ""
+}

@@ -1,0 +1,56 @@
+__**Don't forget to replace <Something> with your inputs, WITHOUT '<' and '>' .**__
+
+**Here is the List of all available Commands:**
+
+```glsl
+$(suffix)changeLanguage  <2 letters for the language>
+	# Changes the Server Language. Currently available are:  'en' 'de'.
+$(suffix)changeSuffix  <Your desired Suffix>
+	# Changes the Suffix (currently '$(suffx)') to what you want.
+$(suffix)addCom  <Command Name (without Suffix)>	<Content you want me to send (use '$(user)' to mention the sender)>
+	# Adds a Custom-Command.
+$(suffix)changeCom  <Command Name (without Suffix)>	<Content you want me to send (use '$(user)' to mention the sender)>
+	# Changes the Content of an existing Custom-Command.
+$(suffix)delCom  <Command Name (without Suffix)>
+	# Deletes a Custom-Command.
+$(suffix)clear  <Amount to be deleted OR 'All' to clear everything>
+	# Deletes Messages to clear your Chat-Room (Needs rights to 'Manage Messages' and 'Read Message History').
+$(suffix)startPoll  <Description of Poll>
+	# Starts a new Poll.
+$(suffix)finishPoll  
+	# Finishes an ongoing Poll.
+$(suffix)showPoll  
+	# Shows the ongoing Poll and the registered Items.
+$(suffix)lastPoll  <Number or nothing>
+	# Can show 1 out of the 30 last Polls, the Number decides which one.
+```$;*```glsl
+$(suffix)addItem  <Name of Item>
+	# Adds a new Item to the ongoing Poll.
+$(suffix)vote  <Name of Item>
+	# Votes for an Item of the Poll, make sure to write it down exactly like it is set in the Poll.
+$(suffix)remindMe  <Message>	after	<Time f.e. '0d 1h 30m 0s' or also possible '1.5h'>
+	# Sends you the typed in Message as Private Message after a specified time.
+$(suffix)remindEveryone  <Message>	after	<Time f.e. '0d 1h 30m 0s' or also possible '1.5h'>
+	# Repeats the typed in Message in the TextChannel to everyone after a specified time.
+$(suffix)remindSomeone  <Message with Mention(s)>	after	<Time f.e. '0d 1h 30m 0s' or also possible '1.5h'>
+	# Sends the typed in Message to the Person(s) you mentioned after a specified time.
+$(suffix)showReminders  
+	# Shows a List (Ascending) with all set Reminders together with the Number used for Removing a Reminder.
+$(suffix)removeReminder  <Number of the Reminder to delete>
+	# Removes a Reminder so it won't remind you.
+$(suffix)ud  <Search term>
+	# Returns the first result from Urban Dictionary.
+$(suffix)malAnime  <Search term>
+	# Shows the first entry of the searched Anime title.
+$(suffix)malManga  <Search term>
+	# Shows the first entry of the searched Manga title.
+```$;*```glsl
+$(suffix)malUser  <User-Name>
+	# Shows Informations about the MyAnimeList User.
+$(suffix)ping  
+	# Ping me to see the Response Time.
+$(suffix)about  
+	# Inormations about me.
+$(suffix)help  
+	# Shows the List of all the Commands.
+```

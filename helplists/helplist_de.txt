@@ -1,0 +1,56 @@
+__**Vergesse nicht <Irgendwas> mit deinen Eingaben zu ersetzen, OHNE '<' und '>' .**__
+
+**Hier ist die Liste von allen verfügbaren Befehlen:**
+
+```glsl
+$(suffix)changeLanguage  <2 Buchstaben langes Kürzel für Sprache>
+	# Ändert die Serversprache. Momentan verfügbar sind:  'en' 'de'.
+$(suffix)changeSuffix  <Dein erwünschtes Anhängsel>
+	# Ändert das Anhängsel (momentan '$(suffix)') zu was du willst.
+$(suffix)addCom  <Befehlsname (ohne Anhängsel)>	<Nachricht die ich senden soll (benutze '$(user)' um den Absender zu erwähnen)>
+	# Erstellt ein individuellen Befehl.
+$(suffix)changeCom  <Befehlsname (ohne Anhängsel)>	<Nachricht die ich senden soll (benutze '$(user)' um den Absender zu erwähnen)>
+	# Ändert die Nachricht eines individuellen Befehles.
+$(suffix)delCom  <Befehlsname (ohne Anhängsel)>
+	# Löscht ein individuellen Befehl.
+$(suffix)clear  <Anzahl zum Löschen, ODER 'All' für Alles>
+	# Löscht Nachrichten um den Chat zu reinigen (Braucht die Rechte 'Nachrichten verwalten' und 'Nachrichtenverlauf lesen').
+$(suffix)startPoll  <Beschreibung zur Umfrage
+	# Startet eine neue Umfrage.
+$(suffix)finishPoll  
+	# Beendet eine laufende Umfrage.
+$(suffix)showPoll  
+	# Zeigt die laufende Umfrage und ihre Einträge.
+$(suffix)lastPoll  <Zahl oder gar nichts>
+	# Kann eine von den letzten 30 Umfragen zeigen, die Nummer entscheidet welche.
+```$;*```glsl
+$(suffix)addItem  <Name des Eintrags>
+	# Fügt einen neuen Eintrag zur Umfrage hinzu.
+$(suffix)vote  <Name des Eintrages>
+	# Gibt deine Stimme für einen Eintrag, stelle sicher, dass du es genauso schreibst wie in der Umfrage.
+$(suffix)remindMe  <Nachricht>	after	<Zeit z.B '0d 1h 30m 0s' oder auch '1.5h'>
+	# Schickt dir deine eingegebene Nachricht als Privat-Nachricht nach einer von dir bestimmten Zeit.
+$(suffix)remindEveryone  <Nachricht>	after	<Zeit z.B '0d 1h 30m 0s' oder auch '1.5h'>
+	# Wiederholt deine eingegebene Nachricht im Text-Kanal nach einer von dir bestimmten Zeit.
+$(suffix)remindSomeone  <Nachricht mit einer Erwähnung/Erwähnungen>	after	<Zeit z.B '0d 1h 30m 0s' oder auch '1.5h'>
+	# Schickt der Person / den Personen eine Privat-Nachricht nach einer von dir bestimmten Zeit.
+$(suffix)showReminders  
+	# Zeigt eine Liste (Aufsteigend) mit allen geplanten Erinnerungen sowie die Nummer für das Löschen.
+$(suffix)removeReminder  <Nummer der Erinnerung zum Löschen>
+	# Löscht eine Erinerrung, sodass es dich nicht mehr erinnert.
+$(suffix)ud  <Suchbegriff>
+	# Gibt das erste Ergebnis von Urban Dictionary aus.
+$(suffix)malAnime  <Suchbegriff>
+	# Zeigt den ersten Eintrag zum gesuchten Anime von MyAnimeList.
+$(suffix)malManga  <Suchbegriff>
+	# Zeigt den ersten Eintrag zum gesuchten Manga von MyAnimeList.
+```$;*```glsl
+$(suffix)malUser  <Benutzername>
+	# Zeigt Informationen über den MyAnimeList Benutzer.
+$(suffix)ping  
+	# Ping mich an um zu sehen wie lange ich brauche zum Antworten.
+$(suffix)about  
+	# Informationen über mich.
+$(suffix)help  
+	# Zeigt die Liste von allen Befehlen.
+```

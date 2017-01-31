@@ -1,0 +1,26 @@
+{
+  "name": "marci696-discord-bot",
+  "version": "0.23.5",
+  "description": "Chat-Bot made for Discord",
+  "author": "Marci | Marci696 | Marcel Fischer",
+  "main": "./main.js",
+  "bugs": {
+    "email": "marci.bot.discord@gmail.com"
+  },
+  "private": true,
+  "license": "UNLICENSED",
+  "jshintConfig": {
+    "esversion": 6
+  },
+  "dependencies": {
+    "after": "^0.8.2",
+    "discord.js": "^8.1.0",
+    "html-entities": "^1.2.0",
+    "mysql": "^2.11.1",
+    "querystring": "^0.2.0",
+    "replaceall": "^0.1.6",
+    "unirest": "^0.5.1",
+    "winston": "^2.2.0",
+    "xml2js": "^0.4.17"
+  }
+}

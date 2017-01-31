@@ -1,0 +1,353 @@
+{
+  "en": {
+    "commands": {
+      "changeLanguage":{
+        "name": "changeLanguage",
+        "usage": "<2 letters for the language>",
+        "description": "Changes the Server Language. Currently available are: $(languageList)."
+      },
+      "changeSuffix":{
+        "name": "changeSuffix",
+        "usage": "<Your desired Suffix>",
+        "description": "Changes the Suffix (currently '$(suffx)') to what you want."
+      },
+      "addCom":{
+        "name": "addCom",
+        "usage": "<Command Name (without Suffix)>\t<Content you want me to send (use '$(user)' to mention the sender)>",
+        "description": "Adds a Custom-Command."
+      },
+      "changeCom":{
+        "name": "changeCom",
+        "usage": "<Command Name (without Suffix)>\t<Content you want me to send (use '$(user)' to mention the sender)>",
+        "description": "Changes the Content of an existing Custom-Command."
+      },
+      "delCom":{
+        "name": "delCom",
+        "usage": "<Command Name (without Suffix)>",
+        "description": "Deletes a Custom-Command."
+      },
+      "clear": {
+        "name": "clear",
+        "usage": "<Amount to be deleted OR 'All' to clear everything>",
+        "description": "Deletes Messages to clear your Chat-Room (Needs rights to 'Manage Messages' and 'Read Message History')."
+      },
+      "startPoll": {
+        "name": "startPoll",
+        "usage": "<Description of Poll>",
+        "description": "Starts a new Poll."
+      },
+      "finishPoll": {
+        "name": "finishPoll",
+        "usage": "",
+        "description": "Finishes an ongoing Poll."
+      },
+      "showPoll": {
+        "name": "showPoll",
+        "usage": "",
+        "description": "Shows the ongoing Poll and the registered Items."
+      },
+      "lastPoll": {
+        "name": "lastPoll",
+        "usage": "<Number or nothing>",
+        "description": "Can show 1 out of the 30 last Polls, the Number decides which one."
+      },
+      "addItem": {
+        "name": "addItem",
+        "usage": "<Name of Item>",
+        "description": "Adds a new Item to the ongoing Poll."
+      },
+      "vote": {
+        "name": "vote",
+        "usage": "<Name of Item>",
+        "description": "Votes for an Item of the Poll, make sure to write it down exactly like it is set in the Poll."
+      },
+      "remindMe": {
+        "name": "remindMe",
+        "usage": "<Message>\tafter\t<Time f.e. '0d 1h 30m 0s' or also possible '1.5h'>",
+        "description": "Sends you the typed in Message as Private Message after a specified time."
+      },
+      "remindEveryone": {
+        "name": "remindEveryone",
+        "usage": "<Message>\tafter\t<Time f.e. '0d 1h 30m 0s' or also possible '1.5h'>",
+        "description": "Repeats the typed in Message in the TextChannel to everyone after a specified time."
+      },
+      "remindSomeone": {
+          "name": "remindSomeone",
+          "usage": "<Message with Mention(s)>\tafter\t<Time f.e. '0d 1h 30m 0s' or also possible '1.5h'>",
+          "description": "Sends the typed in Message to the Person(s) you mentioned after a specified time."
+      },
+      "showReminders": {
+        "name": "showReminders",
+        "usage": "",
+        "description": "Shows a List (Ascending) with all set Reminders together with the Number used for Removing a Reminder."
+      },
+      "removeReminder": {
+		      "name": "removeReminder",
+		      "usage": "<Number of the Reminder to delete>",
+		      "description": "Removes a Reminder so it won't remind you."
+      },
+      "ud":{
+        "name": "ud",
+        "usage": "<Search term>",
+        "description": "Returns the first result from Urban Dictionary."
+      },
+      "malAnime":{
+        "name": "malAnime",
+        "usage": "<Search term>",
+        "description": "Shows the first entry of the searched Anime title."
+      },
+      "malManga":{
+        "name": "malManga",
+        "usage": "<Search term>",
+        "description": "Shows the first entry of the searched Manga title."
+      },
+      "malUser":{
+        "name": "malUser",
+        "usage": "<User-Name>",
+        "description": "Shows Informations about the MyAnimeList User."
+      },
+      "ping":{
+        "name": "ping",
+        "usage": "",
+        "description": "Ping me to see the Response Time."
+      },
+      "about":{
+        "name": "about",
+        "usage": "",
+        "description": "Inormations about me."
+      },
+      "help": {
+          "name": "help",
+          "usage": "",
+          "description": "Shows the List of all the Commands."
+      }
+    },
+    "commandNotFound": "Your command was not found, type **$(trigger)help** for the Command-List.",
+    "permissionDenied": "You don't have the permissions to execute this command.",
+    "languageNotAvailable": "The language **$(text)** is not available as of now.",
+    "languageChanged": "The Server Language has been changed.",
+    "suffixChanged": "@everyone, The suffix was changed to '**$(suffix)**' !",
+    "commandTooLong": "Please don't use a Command-Name longer than $(limit) Characters.",
+    "addComSuccessful": "Command **$(suffix)$(reqCommandName)** has been added.",
+    "addComAlreadyExists": "The Command **$(suffix)$(reqCommandName)** already exists, therefore it can't be added.",
+    "changeComSuccessful": "The Command **$(suffix)$(reqCommandName)** has been changed.",
+    "changeComError": "The Command **$(suffix)$(reqCommandName)** can't be changed because it doesn't exist.",
+    "delComSuccessful": "The Command **$(suffix)$(reqCommandName)** has been deleted.",
+    "delComError": "The Command **$(suffix)$(reqCommandName)** can't be deleted because it doesn't exist.",
+    "clearPermissionMissing": "You need to give me the rights 'Manage Messages' and 'Read Message History' to execute this command.",
+    "pollStarted": "@everyone, A new Poll has started:\n\n*$(text)*",
+    "pollVoteCounted": "Your vote for **$(text)** has been counted",
+    "pollFinished": "@everyone, The Poll has finished, here are the Results:$(poll)",
+    "pollNotActive": "There currently is no Poll active.",
+    "pollAlreadyActive": "Please finish the last Poll before you start a new one.",
+    "pollNoHistory": "There were no Polls on this Channel so far.",
+    "pollNotExist": "This Poll does not exist.",
+    "notInThePoll": "**$(text)** is not in the Poll.",
+    "addedToPoll": "**$(text)** has been successfully added to the List.",
+    "alreadyInPoll": "Item is already in the Poll",
+    "pollShow": "$(poll)",
+    "pollLastInfo": "This Poll was active from\n$(start)\n**to**\n$(finish)$(poll)",
+    "pollHeadline": "**Ranking**\t\t**Votes**\t\t**Name**\n",
+    "wrongUseOfCommand": "Please use the Command in this Format  **__without__** '<' and '>':\n```ruby\n$(trigger)$(commandName)\t$(usage)```",
+    "remindMeConfirmation": "I'll remind you in\n$(days)d\t$(hours)h\t$(minutes)m\t$(seconds)s",
+    "remindMeMessage": "**:bell:Reminder:bell:**\n$(reminder)",
+    "remindEveryoneConfirmation":"I'll remind everyone in\n$(days)d\t$(hours)h\t$(minutes)m\t$(seconds)s",
+    "remindSomeoneOneConfirmation": "I'll remind the Person in\n$(days)d\t$(hours)h\t$(minutes)m\t$(seconds)s",
+    "remindSomeoneMultipleConfirmation": "I'll remind them in\n$(days)d\t$(hours)h\t$(minutes)m\t$(seconds)s",
+    "remindSomeoneMessage": "**:bell:Reminder from $(author):bell:**\n$(reminder)",
+  	"removeReminderListTitle": "**__Set Reminders:__**\n",
+  	"removeReminderListEnd": "",
+  	"removeReminderListItem": "\n**$(position)**:\tTo be sent to $(receiver) in __$(days)d $(hours)h $(minutes)m $(seconds)s__.",
+    "removeReminderNone": "There is no Reminder set currently.",
+    "removeReminderNotFound": "A Reminder with the Number **$(number)** doesn't exist.",
+    "removeReminderDeleted": ":no_bell:Reminder for $(receiver) that was to be sent in __$(days)d $(hours)h $(minutes)m $(seconds)s__ was removed.:no_bell:",
+    "urbanDictionaryArticle": "The term **$(title)**:\n\n**__Definition:__**\n```$(definition)```\n\n**__Example:__**\n```$(example)```\n$(thumbsUp) :thumbsup:\t$(thumbsDown) :thumbsdown:\n\n*Source: Urban Dictionary*",
+    "urbanDictionaryNoResult": "**$(text)** returned no Result.",
+    "urbanDictionaryTooLong": "Message too long for Discord. Check the Link instead: $(link)",
+    "malAnimeArticle": "**$(title)**\t$(synonyms)\n\n__Score:__ $(score)\t__Status:__ $(status)\t__Type:__ $(type)\n\n```$(description)```\n$(img)",
+    "malAnimeNoResult": "**$(text)** couldn't be found.",
+    "malMangaArticle": "**$(title)**\t$(synonyms)\n\n__Score:__ $(score)\t__Status:__ $(status)\t__Type:__ $(type)\n\n```$(description)```\n$(img)",
+    "malMangaNoResult": "**$(text)** couldn't be found.",
+    "malUserArticle": "\n**$(malName)**\n\n__Anime:__\n```ruby\nWatching: $(watchingAn)\nCompleted: $(completedAn)\nOn-Hold: $(onHoldAn)\nDropped: $(droppedAn)\nPlan To Watch: $(ptwAn)\nDays Spent Watching: $(dswAn)```\n__Manga:__\n```ruby\nReading: $(readingMa)\nCompleted: $(completedMa)\nOn-Hold: $(onHoldMa)\nDropped: $(droppedMa)\nPlan To Read: $(ptrMa)\nDays Spent Reading: $(dsrMa)```\nhttp://myanimelist.net/profile/$(malName)",
+    "malUserNotFound": "The User **$(text)** doesn't exist.",
+    "pingMessage": "$(user), It took me $(time)ms to respond.",
+    "aboutMessage": "My Name is **$(botName)** (*v$(version)*) and I'm beeing developed by $(developerName).\nYou can give me Feedback by sending a Mail to **__marci.bot.discord@gmail.com__**.\nI'm currently in **$(servers)** Servers and **$(channels)** Channels serving **$(users)** Users.\n\n__Uptime:__\t$(days)d\t$(hours)h\t$(minutes)m\t$(seconds)s",
+    "listHelp": "__**Don't forget to replace <Something> with your inputs, WITHOUT '<' and '>' .**__\n\n**Here is the List of all available Commands:**\n\n$(helpList)"
+  },
+  "de": {
+    "commands": {
+      "changeLanguage":{
+        "name": "changeLanguage",
+        "usage": "<2 Buchstaben langes Kürzel für Sprache>",
+        "description": "Ändert die Serversprache. Momentan verfügbar sind: $(languageList)."
+      },
+      "changeSuffix":{
+        "name": "changeSuffix",
+        "usage": "<Dein erwünschtes Anhängsel>",
+        "description": "Ändert das Anhängsel (momentan '$(suffix)') zu was du willst."
+      },
+      "addCom":{
+        "name": "addCom",
+        "usage": "<Befehlsname (ohne Anhängsel)>\t<Nachricht die ich senden soll (benutze '$(user)' um den Absender zu erwähnen)>",
+        "description": "Erstellt ein individuellen Befehl."
+      },
+      "changeCom":{
+        "name": "changeCom",
+        "usage": "<Befehlsname (ohne Anhängsel)>\t<Nachricht die ich senden soll (benutze '$(user)' um den Absender zu erwähnen)>",
+        "description": "Ändert die Nachricht eines individuellen Befehles."
+      },
+      "delCom":{
+        "name": "delCom",
+        "usage": "<Befehlsname (ohne Anhängsel)>",
+        "description": "Löscht ein individuellen Befehl."
+      },
+      "clear": {
+        "name": "clear",
+        "usage": "<Anzahl zum Löschen, ODER 'All' für Alles>",
+        "description": "Löscht Nachrichten um den Chat zu reinigen (Braucht die Rechte 'Nachrichten verwalten' und 'Nachrichtenverlauf lesen')."
+      },
+      "startPoll": {
+        "name": "startPoll",
+        "usage": "<Beschreibung zur Umfrage",
+        "description": "Startet eine neue Umfrage."
+      },
+      "finishPoll": {
+        "name": "finishPoll",
+        "usage": "",
+        "description": "Beendet eine laufende Umfrage."
+      },
+      "showPoll": {
+        "name": "showPoll",
+        "usage": "",
+        "description": "Zeigt die laufende Umfrage und ihre Einträge."
+      },
+      "lastPoll": {
+        "name": "lastPoll",
+        "usage": "<Zahl oder gar nichts>",
+        "description": "Kann eine von den letzten 30 Umfragen zeigen, die Nummer entscheidet welche."
+      },
+      "addItem": {
+        "name": "addItem",
+        "usage": "<Name des Eintrags>",
+        "description": "Fügt einen neuen Eintrag zur Umfrage hinzu."
+      },
+      "vote": {
+        "name": "vote",
+        "usage": "<Name des Eintrages>",
+        "description": "Gibt deine Stimme für einen Eintrag, stelle sicher, dass du es genauso schreibst wie in der Umfrage."
+      },
+      "remindMe": {
+        "name": "remindMe",
+        "usage": "<Nachricht>\tafter\t<Zeit z.B '0d 1h 30m 0s' oder auch '1.5h'>",
+        "description": "Schickt dir deine eingegebene Nachricht als Privat-Nachricht nach einer von dir bestimmten Zeit."
+      },
+      "remindEveryone": {
+        "name": "remindEveryone",
+        "usage": "<Nachricht>\tafter\t<Zeit z.B '0d 1h 30m 0s' oder auch '1.5h'>",
+        "description": "Wiederholt deine eingegebene Nachricht im Text-Kanal nach einer von dir bestimmten Zeit."
+      },
+      "remindSomeone": {
+          "name": "remindSomeone",
+          "usage": "<Nachricht mit einer Erwähnung/Erwähnungen>\tafter\t<Zeit z.B '0d 1h 30m 0s' oder auch '1.5h'>",
+          "description": "Schickt der Person / den Personen eine Privat-Nachricht nach einer von dir bestimmten Zeit."
+      },
+      "showReminders": {
+        "name": "showReminders",
+        "usage": "",
+        "description": "Zeigt eine Liste (Aufsteigend) mit allen geplanten Erinnerungen sowie die Nummer für das Löschen."
+      },
+      "removeReminder": {
+		      "name": "removeReminder",
+		      "usage": "<Nummer der Erinnerung zum Löschen>",
+		      "description": "Löscht eine Erinerrung, sodass es dich nicht mehr erinnert."
+      },
+      "ud":{
+        "name": "ud",
+        "usage": "<Suchbegriff>",
+        "description": "Gibt das erste Ergebnis von Urban Dictionary aus."
+      },
+      "malAnime":{
+        "name": "malAnime",
+        "usage": "<Suchbegriff>",
+        "description": "Zeigt den ersten Eintrag zum gesuchten Anime von MyAnimeList."
+      },
+      "malManga":{
+        "name": "malManga",
+        "usage": "<Suchbegriff>",
+        "description": "Zeigt den ersten Eintrag zum gesuchten Manga von MyAnimeList."
+      },
+      "malUser":{
+        "name": "malUser",
+        "usage": "<Benutzername>",
+        "description": "Zeigt Informationen über den MyAnimeList Benutzer."
+      },
+      "ping":{
+        "name": "ping",
+        "usage": "",
+        "description": "Ping mich an um zu sehen wie lange ich brauche zum Antworten."
+      },
+      "about":{
+        "name": "about",
+        "usage": "",
+        "description": "Informationen über mich."
+      },
+      "help": {
+          "name": "help",
+          "usage": "",
+          "description": "Zeigt die Liste von allen Befehlen."
+      }
+    },
+    "commandNotFound": "Befehl konnte nicht gefunden werden, schreibe **$(trigger)help** für die Befehlsliste.",
+    "permissionDenied": "Du besitzt nicht genügend Rechte um diesen Befehl auszuführen.",
+    "languageNotAvailable": "Die Sprache **$(text)** ist momentan noch nicht verfügbar.",
+    "languageChanged": "Die Serversprache wurde geändert.",
+    "suffixChanged": "@everyone, Das Anhängsel wurde zu '**$(suffix)**' geändert!",
+    "commandTooLong": "Bitte nutze keinen Befehlsnamen der Länger ist als $(limit) Zeichen.",
+    "addComAlreadyExists": "Der Befehl **$(suffix)$(reqCommandName)** existiert bereits, daher kann er nicht erstellt werden.",
+    "addComSuccessful": "Der Befehl **$(suffix)$(reqCommandName)** wurde erstellt.",
+    "changeComSuccessful": "Der Befehl **$(suffix)$(reqCommandName)** wurde geändert.",
+    "changeComError": "Der Befehl **$(suffix)$(reqCommandName)** kann nicht verändert werden, da er nicht exisitert.",
+    "delComSuccessful": "Der Befehl **$(suffix)$(reqCommandName)** wurde gelöscht.",
+    "delComError": "Der Befehl **$(suffix)$(reqCommandName)** kann nicht gelöscht werden, da er nicht exisitert.",
+    "clearPermissionMissing": "Jemand muss mir die Rechte 'Nachrichten verwalten' und 'Nachrichtenverlauf lesen' geben um dies auszuführen.",
+    "pollStarted": "@everyone, Eine neue Umfrage wurde gestartet:\n\n*$(text)*",
+    "pollVoteCounted": "Deine Stimme für **$(text)** wurde gezählt.",
+    "pollFinished": "@everyone, Die Umfrage ist beendet, hier sind die Ergebnisse:$(poll)",
+    "pollNotActive": "Momentan ist keine Umfrage aktiv.",
+    "pollAlreadyActive": "Bitte beende die laufende Umfrage bevor du eine neue beginnst.",
+    "pollNoHistory": "In diesem Channel hat noch keine Umfrage stattgefunden.",
+    "pollNotExist": "Diese Umfrage existiert nicht.",
+    "notInThePoll": "**$(text)** befindet sich nicht in der Umfrage.",
+    "addedToPoll": "**$(text)** wurde erfolgreich zur Umfrage hinzugefügt.",
+    "alreadyInPoll": "Eintrag befindet sich bereits in der Umfrage.",
+    "pollShow": "$(poll)",
+    "pollLastInfo": "Diese Umfrage war aktiv von\n$(start)\n**bis**\n$(finish)$(poll)",
+    "pollHeadline": "**Rang**\t\t**Stimmen**\t\t**Name**\n",
+    "wrongUseOfCommand": "Bitte nutze den Befehl in diesen Format,  **__ohne__** '<' und '>':\n```ruby\n$(trigger)$(commandName)\t$(usage)```",
+    "remindMeConfirmation": "Ich erinnere dich in\n$(days)d\t$(hours)h\t$(minutes)m\t$(seconds)s",
+    "remindMeMessage": "**:bell:Erinnerung:bell:**\n$(reminder)",
+    "remindEveryoneConfirmation":"Ich erinnere jeden in\n$(days)d\t$(hours)h\t$(minutes)m\t$(seconds)s",
+    "remindEveryoneMessage": "Von $(user):\n\n @everyone, $(text)",
+    "remindSomeoneOneConfirmation": "Ich erinnere die Person in\n$(days)d\t$(hours)h\t$(minutes)m\t$(seconds)s",
+    "remindSomeoneMultipleConfirmation": "Ich erinnere sie in\n$(days)d\t$(hours)h\t$(minutes)m\t$(seconds)s",
+    "remindSomeoneMessage": "**:bell:Erinnerung von $(author):bell:**\n$(reminder)",
+    "removeReminderListTitle": "**__Geplante Erinnerungen:__**\n",
+    "removeReminderListEnd": "",
+    "removeReminderListItem": "\n**$(position)**:\tWird geschickt an $(receiver) in __$(days)d $(hours)h $(minutes)m $(seconds)s__.",
+    "removeReminderNone": "Momentan ist keine erinnerung geplant.",
+    "removeReminderNotFound": "Eine Erinnerung mit der Nummer **$(number)** existiert nicht.",
+    "removeReminderDeleted": ":no_bell:Erinnerung an $(receiver) welche in __$(days)d $(hours)h $(minutes)m $(seconds)s__ verschickt werden sollte, wurde entfernt.:no_bell:",
+    "urbanDictionaryArticle": "Der Begriff  **$(title)**:\n\n**__Definition:__**\n```$(definition)```\n\n**__Beispiel:__**\n```$(example)```\n$(thumbsUp) :thumbsup:\t$(thumbsDown) :thumbsdown:\n\n*Quelle: Urban Dictionary*",
+    "urbanDictionaryNoResult": "**$(text)** lieferte kein Ergebnis.",
+    "urbanDictionaryTooLong": "Nachricht zu Lang für Discord. Probiere es stattdessen mit dem Link: $(link)",
+    "malAnimeArticle": "**$(title)**\t$(synonyms)\n\n__Score:__ $(score)\t__Status:__ $(status)\t__Type:__ $(type)\n\n```$(description)```\n$(img)",
+    "malAnimeNoResult": "**$(text)** konnte nicht gefunden werden.",
+    "malMangaArticle": "**$(title)**\t$(synonyms)\n\n__Score:__ $(score)\t__Status:__ $(status)\t__Type:__ $(type)\n\n```$(description)```\n$(img)",
+    "malMangaNoResult": "**$(text)** konnte nicht gefunden werden.",
+    "malUserArticle": "\n**$(malName)**\n\n__Anime:__\n```ruby\nAm Schauen: $(watchingAn)\nAbgeschlossen: $(completedAn)\nPausiert: $(onHoldAn)\nGeschmissen: $(droppedAn)\nGeplant Zu Schauen: $(ptwAn)\nTage mit Schauen Verbracht: $(dswAn)```\n__Manga:__\n```ruby\nAm Lesen: $(readingMa)\nAbgeschlossen: $(completedMa)\nPausiert: $(onHoldMa)\nGeschmissen: $(droppedMa)\nGeplant Zu Lesen: $(ptrMa)\nTage mit Lesen Verbracht: $(dsrMa)```\nhttp://myanimelist.net/profile/$(malName)",
+    "malUserNotFound": "Dieser Benutzer **$(text)** existiert nicht.",
+    "pingMessage": "$(user), Ich habe $(time)ms gebraucht um zu Antworten.",
+    "aboutMessage": "Mein Name ist **$(botName)** (*v$(version)*) und ich werde von $(developerName) entwickelt.\nRückmeldung und Verbesserungsvorschläge kannst du an **__marci.bot.discord@gmail.com__** senden.\nMomentan bin ich auf **$(servers)** Servern, **$(channels)** Kanälen und diene **$(users)** Nutzern.\n\n__Am laufen seit:__\t$(days)t\t$(hours)std.\t$(minutes)min.\t$(seconds)sec.",
+    "listHelp": "__**Vergesse nicht <Irgendwas> mit deinen Eingaben zu ersetzen, OHNE '<' und '>' .**__\n\n**Hier ist die Liste von allen verfügbaren Befehlen:**\n\n$(helpList)"
+  }
+}
